@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Videos - Geospatial tracking of the spread of samples from introduction events within Ireland</title>
+    <meta name="description" content="">
+    <meta name="author" content="None">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="static/css/normalize.css">
+    <link rel="stylesheet" href="static/themes/classic/galleria.classic.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+    body::after{
+        position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+        content:url(videos/D573.mp4);
+    }</style>
+  </head>
+
+  <script src="static/jszip.min.js"></script>
+  <script src="static/FileSaver.min.js"></script>
+  <script>
+    function downloadAll() {
+      var zip = new JSZip();
+      zip.file("videos/D613.mp4");
+ 
+
+      zip.generateAsync({type:"blob", compression: "DEFLATE"}).then(function(content) {
+        // see FileSaver.js
+        saveAs(content, "videos.zip");
+    });
+    }
+  </script>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1><a href="./">Geospatial tracking of the spread of samples from SARS-CoV-2 introduction events within Ireland</a></h1>
+
+
+
+
+<nav id="menu">
+  <ul>
+    <li><a href="http://example.org">GitHub</a></li>
+    <li><a href="http://example.org">Paper</a></li>
+    <li><a href="http://example.org">Cite</a></li>
+    <li><a href="http://example.org">Contacts</a></li>
+    <li><a href="javascript:void(0)" onclick="downloadAll();">Downloads</a></li>
+  </ul>
+</nav>
+      </header>
+
+      <div id="main" role="main">
+<div class="icons">
+  <a id="fullscreen"><img src="static/img/fullscreen.png"
+                          title="Fullscreen" alt="Fullscreen (f)" /></a>
+</div>
+
+<div id="description"></div>
+<h2>About</h2>
+<p>This video gallery is a part of the supplementary material for the paper <b><a href="https://biorxiv.org">SARS-CoV-2 introductions to the island of Ireland</a></b>. It contains animations depicting geospatiotemporal spread for exemplar SARS-CoV-2 introduction events within Ireland. 
+</p>
+
+<h2>Gallery</h2>
+
+<p> Click on the <font style="font-family: serif"><i><b>i</i></b></font> icon in the top left corner for additional information about each video. The gallery can be navigated using the arrow keys or by clicking on the thumbnails. The videos are best viewed in fullscreen mode (press <font style="font-family: serif"><i><b>f</i></b></font> to toggle fullscreen mode). The videos are also available for download in the <a href="  ">Downloads</a> section.</p>
+
+<div id="gallery"></div>
+
+
+    <script src="static/jquery-3.3.1.min.js"></script>
+
+
+    <script src="static/galleria.min.js"></script>
+    <script src="static/themes/classic/galleria.classic.min.js"></script>
+    <script src="static/plugins/history/galleria.history.min.js"></script>
+    
+    
+    <script>
+    var data = [
+      {
+  
+        title: "Figure S13.",
+        description: "The animated version of Figure S11B. An introduction cluster from England (D573) spanning from 25 June to 31 July 2021 (Period D) and comprising 118 RoI Delta SARS-CoV-2 isolates. The infection hops from County Meath (MH) to County Tipperary (TY) in the Republic of Ireland, but is largely transmitted via intra- and neighbouring-region spread events.",
+        thumb: "thumbnails/D573.jpg",
+        image: "static/img/empty.png",
+        layer: "<video controls><source src='videos/D573.mp4' type='video/mp4' /></video>"
+      },
+      {
+  
+        title: "Figure S14",
+        description: "The animated version of Figure S11C. The spread of a large introduction cluster (F202) from Scotland comprising 132 Irish Omicron BA.2 SARS-CoV-2 isolates spanning 61 days between 11 January and 13 March 2022 (Period F), which are largely confined to the territory of Northerh Ireland.",
+        thumb: "thumbnails/F202.jpg",
+        image: "static/img/empty.png",
+        layer: "<video controls><source src='videos/F202.mp4' type='video/mp4' /></video>"
+      },
+{
+  
+        title: "Figure S15",
+        description: "The animated version of Figure 6B. An introduction cluster (D613) of 960 Irish Delta SARS-CoV-2 isolates originating from Scotland via Causeway Coast and Glens (CC) in Northern Ireland during Period D (2 June&ndash;31 July 2021) showed intra- and neighbouring-region spread, with a transmission hop from Northern Ireland to County Roscommon (RN) and County Dublin (DN) in the Republic of Ireland.",
+        thumb: "thumbnails/D613.jpg",
+        image: "static/img/empty.png",
+        layer: "<video controls><source src='videos/D613.mp4' type='video/mp4' /></video>"
+      },
+{
+        title: "Figure S16",
+        description: "The animated version of Figure 6C. An introduction cluster (E316) of 1,274 Irish Omicron BA.1 SARS-CoV-2 isolates during Period E (30November 2021&ndash;31 January 2022) spread similarly to cluster D613, originating from England via County Dublin (DN) and County Kildare (KE).",
+        thumb: "thumbnails/E316.jpg",
+        image: "static/img/empty.png",
+        layer: "<video controls><source src='videos/E316.mp4' type='video/mp4' /></video>"
+      },
+{
+        title: "Figure S17",
+        description: "The spread of the largest cluster detected (F1311). This cluster of BA.2 SARS-CoV-2 affecting 2,377 individuals in Ireland arose during Period F and lasted 83 days. First sequences belonging to this cluster were detected in Northern Ireland on 26 December 2021 and by 19 March 2022, the cluster had spread to all counties in Norther Ireland and almost all counties in the Republic of Ireland, except for MO (Mayo), Sligo (SO), and Longford (LD).",
+        thumb: "thumbnails/F1311.jpg",
+        image: "static/img/empty.png",
+        layer: "<video controls><source src='videos/F1311.mp4' type='video/mp4' /></video>"
+      },
+    ]
+
+    Galleria.ready(function() {
+        /*
+        load thumbnails after gallery setup, and download has started
+        for the main images, but before the loading of map tiles starts
+        in the background. This ensures visible elements are prioritised
+        over non-visible elements
+
+        The choice to lazy load thumbnails in batches of 50 was not made
+        scientifically. Other numbers may yield better performance.
+        */
+        this.lazyLoadChunks( 50 );
+
+        this.attachKeyboard({
+            right: this.next,
+            left: this.prev,
+            /* Toggle fullscreen display on press of 'f' key */
+            0x46: this.toggleFullscreen,
+        });
+
+        var gallery = this;
+        $('#fullscreen').click(function() {
+          gallery.toggleFullscreen();
+        });
+
+        $('.icons').appendTo(this.$('container'));
+    });
+
+    Galleria.configure({
+        imageCrop: false,
+        transition: "fade",
+        thumbnails: "lazy"
+    });
+    Galleria.run("#gallery", {dataSource: data});
+
+    </script>
+
+<h2>Abbreviations</h2>
+AN (Antrim and Newtownabbey), AD (Ards and North Down), AB (Armagh City, Banbridge and Craigavon), BF (Belfast), CC (Causeway Coast and Glens), DS (Derry City and Strabane), FO (Fermanagh and Omagh), LC (Lisburn and Castlereagh), AM (Mid and East Antrim), MU (Mid Ulster), NM (Newry, Mourne and Down), CW (Carlow), CN (Cavan), CE (Clare), CK (Cork), DL (Donegal), DN (Dublin), GY (Galway), KY (Kerry), KE (Kildare), KK (Kilkenny), LS (Laois), LM (Leitrim), LK (Limerick), LD (Longford), LH (Louth), MO (Mayo), MH (Meath), MN (Monaghan), OY (Offaly), RN (Roscommon), SO (Sligo), TY (Tipperary), WD (Waterford), WH (Westmeath), WX (Wexford), WW (Wicklow). 
+
+</div>
+<footer>
+  <p>
+    <span>Generated by <a href="https://github.com/saimn/sigal">sigal</a></span>
+  </p>
+</footer>    </div>
+  </body>
+</html>
