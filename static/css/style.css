@@ -121,7 +121,7 @@ header h1 a:hover, header h2 a:hover {
   clear: both;
 }
 #gallery video {
-  position: absolute;
+/*   position: absolute; */
   top: 5%;
   width: 90%;
   margin: 0 auto;
